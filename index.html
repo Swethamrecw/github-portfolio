@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffe4ec, #ffffff);
+      color: #333;
+      transition: background 0.3s ease;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #fff;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.1);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .typing-text {
+      font-size: 1.2rem;
+      font-weight: 500;
+      height: 1.5rem;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #f06292;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    ul li {
+      background-color: #fff0f5;
+      border-radius: 15px;
+      padding: 12px 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      color: #444;
+      font-weight: 600;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    ul li:hover {
+      transform: scale(1.05);
+      background-color: #fce4ec;
+    }
+
+    .project {
+      background-color: #fff8fb;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-left: 5px solid #f48fb1;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project h3 {
+      color: #ec407a;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      background-color: #fffafc;
+      color: #333;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #f06292;
+      outline: none;
+    }
+
+    button {
+      background-color: #f06292;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #ec407a;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #f8bbd0;
+      color: #fff;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Kurva Swetha</h1>
+    <p class="typing-text" id="typing"></p>
+    <img src="C:\Users\K.SWETHA\Desktop\22RH1A6754\WhatsApp Image 2025-03-03 at 07.15.15_4c3dce9a.jpg" alt="Profile" class="profile-pic">
+  </header>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <h3 style="text-align:center; color:#ba68c8; margin-bottom:10px;">Technical</h3>
+    <ul>
+      <li>Python (Basic)</li>
+      <li>C (Basic)</li>
+      <li>Java (Basic)</li>
+      <li>MySQL</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Microsoft Office</li>
+      <li>Jupyter Notebook</li>
+      <li>VS Code</li>
+    </ul>
+    <h3 style="text-align:center; color:#ba68c8; margin-top:30px; margin-bottom:10px;">Non-Technical</h3>
+    <ul>
+      <li>Team Work</li>
+      <li>Communication Skills</li>
+      <li>Time Management</li>
+      <li>Leadership Skills</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>Drought Prediction</h3>
+      <p>This project focuses on predicting drought conditions using historical climate data, including temperature, rainfall, and humidity. It employs machine learning models to classify drought severity, helping in proactive agricultural and water resource planning.</p>
+      <p><strong>Technology:</strong> Machine Learning, Python, Pandas, Scikit-learn</p>
+    </div>
+
+    <div class="project">
+      <h3>Market Basket Analysis</h3>
+      <p>This project analyzes transactional data to identify product purchase patterns using association rule mining. It helps in understanding customer buying behavior and provides recommendations for product placement and cross-selling strategies.</p>
+      <p><strong>Technology:</strong> Apriori Algorithm, Python, MLxtend, Pandas</p>
+    </div>
+
+    <div class="project">
+      <h3>Pain Recognition with Physiological Signals</h3>
+      <p>This project utilizes multi-level deep learning algorithms to automatically recognize pain through physiological signals and contextual data. By analyzing features such as heart rate, skin conductance, and temperature, it enhances pain assessment accuracy for individuals unable to communicate verbally.</p>
+      <p><strong>Technology:</strong> Deep Learning</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+
+  <script>
+    const text = "Web Developer | Data Scientist | Innovator";
+    const typingElement = document.getElementById("typing");
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        typingElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+  </script>
+</body>
+
+</html>
